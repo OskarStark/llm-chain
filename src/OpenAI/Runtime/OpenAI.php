@@ -12,7 +12,7 @@ final class OpenAI extends AbstractRuntime implements Runtime
 {
     public function __construct(
         private HttpClientInterface $httpClient,
-        private string $apiKey,
+        #[\SensitiveParameter] private string $apiKey,
     ) {
     }
 

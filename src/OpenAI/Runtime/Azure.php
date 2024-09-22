@@ -15,7 +15,7 @@ final class Azure extends AbstractRuntime implements Runtime
         private string $baseUrl,
         private string $deployment,
         private string $apiVersion,
-        private string $key,
+        #[\SensitiveParameter] private string $key,
     ) {
     }
 

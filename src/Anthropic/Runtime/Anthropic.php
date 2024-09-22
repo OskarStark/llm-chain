@@ -11,7 +11,7 @@ final class Anthropic implements ClaudeRuntime
 {
     public function __construct(
         private HttpClientInterface $httpClient,
-        private string $apiKey,
+        #[\SensitiveParameter] private string $apiKey,
     ) {
     }
 

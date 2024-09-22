@@ -16,7 +16,7 @@ final class SearchStore implements VectorStoreInterface
     public function __construct(
         private readonly HttpClientInterface $httpClient,
         private readonly string $endpointUrl,
-        private readonly string $apiKey,
+        #[\SensitiveParameter] private readonly string $apiKey,
         private readonly string $indexName,
         private readonly string $apiVersion,
     ) {
